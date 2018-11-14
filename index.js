@@ -44,7 +44,7 @@ const time = (function () {
                     case 'YYYY':
                         return this._Y;
                     case 'YY': 
-                        return this._Y.slice(-2);
+                        return String(this._Y).slice(-2);
                     case 'MM':
                         return this._M < 10 ? `0${this._M}` : this._M;
                     case 'M':
