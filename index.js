@@ -70,6 +70,15 @@ const time = (function () {
                 }   
             });
         }
+
+        /**
+         * 判断是都在date之前
+         * @param {*} date 
+         * @return {Boolean} 
+         */
+        isBefore(date){
+            return this._date.getTime() - parseDate(date).getTime() < 0 ? true : false;
+        }
     }
 
 
