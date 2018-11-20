@@ -9,7 +9,11 @@ const time = (function () {
     const parseDate = function (date) {
         if (!date) return new Date();
         if (date instanceof Date) return date;
-        if (date) return new Date(date);
+        if(typeof date === 'string') {
+            //兼容IOS
+            date = date.replace(/-/g, '/');
+            return new Date(date);
+        }
     }
 
 
@@ -19,7 +23,6 @@ const time = (function () {
             this._date = parseDate(date);
             this.init();
         }
-
         /**
          * 初始化日期的数据
          *  */
