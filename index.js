@@ -1,4 +1,5 @@
 const time = (function () {
+    
     const REG_FORMAT = /(Y{2,4})|(M{1,2})|(D{1,2})|(h{1,2})|(m{1,2})|(s{1,2})/g;
 
     /**
